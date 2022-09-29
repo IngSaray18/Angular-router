@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HoeComponent } from './pages/hoe/hoe.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
@@ -20,7 +20,7 @@ component: HoeComponent
 },
 
 
-{path: 'category',
+{path: 'category/:id',
 component: CategoryComponent
 },
 
@@ -46,6 +46,10 @@ component: RecoveryComponent
 
 {path: 'profile',
 component: ProfileComponent
+},
+{
+  path: '**' ,
+  component: NotfoundComponent
 }
 ];
 
